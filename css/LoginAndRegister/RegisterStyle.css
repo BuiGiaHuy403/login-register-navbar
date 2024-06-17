@@ -1,0 +1,15 @@
+body {
+     background: url('../../images/register-vietnamcuisine.jpg') no-repeat;
+     background-position: center;
+     background-size: cover;
+
+}
+.wrapper{
+     backdrop-filter:blur(40px);
+     width:500px;
+}
+.input-small{
+     display:inline-block;
+     width:50%;
+           
+}
