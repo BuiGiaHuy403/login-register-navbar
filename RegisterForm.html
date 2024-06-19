@@ -45,50 +45,13 @@
                 </div>
             </form>
         </div>
-        <!-- <%
-            String printMessage = "";
-            String messageType = "error"; // Default message type
-            String errorMessage = (String) session.getAttribute("REGISTER_ERROR");
-            String successMessage = (String) session.getAttribute("REGISTER_SUCCESS");
-            if (errorMessage != null || successMessage != null) {
-                if (errorMessage != null) {
-                    switch (errorMessage) {
-                        case "Empty":
-                            printMessage = "All fields must be filled!";
-                            break;
-                        case "Email":
-                            printMessage = "Invalid email format!";
-                            break;
-                        case "Password":
-                            printMessage = "Passwords do not match!";
-                            break;
-                        case "banned":
-                            printMessage = "Your account is banned!";
-                            break;
-                        case "FoundEmail":
-                            printMessage ="Your email has already been signed up";
-                            break;
-                        default:
-                            printMessage = "Registration error! Please try again.";
-                            break;
-                    }
-                } else if (successMessage != null) {
-                    printMessage = "Registration successful! You can now log in.";
-                    messageType = "success"; // Change message type to success
-                }
-        %> -->
-        <!-- <div class="popup-error">
+        <div class="popup-error">
             <i class='error-close bx bxs-x-circle' onclick="closeMessage()"></i>
-            <p class='<%=messageType%>-text'>
-                <%= printMessage%>
+            <p class='error-text'>
+                Error
             </p>
         </div>
         <div class="overlay"></div>
-        <%
-                session.removeAttribute("REGISTER_ERROR");
-                session.removeAttribute("REGISTER_SUCCESS");
-            }
-        %> -->
         <script>
             function closeMessage() {
                 var messageType = '<%= messageType%>';
